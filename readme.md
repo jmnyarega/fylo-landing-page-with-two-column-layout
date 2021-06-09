@@ -20,11 +20,11 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ### Screenshot
 
-![Desktop](./screenshot.jpg)
+![Mobile](./design/screenshots/mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [here](https://fylo-landing-page-with-two-column-layout-livid.vercel.app)
 
 ## My process
 
