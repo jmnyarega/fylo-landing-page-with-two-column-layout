@@ -8,12 +8,14 @@ html {
   margin: 0; }
 
 body {
-  max-width: 1440px;
-  width: 90%;
-  margin: 3rem auto;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9375rem;
-  background-color: #eee; }
+  background-color: #eee;
+  margin-top: 3rem; }
+
+.container {
+  max-width: 1440px;
+  width: 95%; }
 
 img {
   max-width: 100%; }
@@ -24,7 +26,8 @@ img {
 .header {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 3rem auto; }
 
 .nav {
   margin-left: auto;
@@ -45,7 +48,7 @@ img {
 
 .hero {
   text-align: center;
-  margin: 5rem 0;
+  margin: 5rem auto;
   color: #070439; }
   .hero__title {
     margin-top: 1.5rem;
@@ -61,13 +64,17 @@ img {
   .hero__email {
     width: 100%;
     font-size: 1.3rem; }
+  .hero__error {
+    display: block;
+    position: absolute;
+    top: 3.5rem; }
   .hero__button {
     margin-top: 1rem;
     width: 100%;
     font-size: 1.3rem; }
 
 .middle-section {
-  margin: 8rem 0; }
+  margin: 8rem auto; }
   .middle-section__title {
     margin-top: 1rem;
     font-size: 2rem;
@@ -80,7 +87,6 @@ img {
     margin-top: 1.5rem;
     font-size: 1rem;
     display: flex;
-    align-items: center;
     justify-content: center;
     column-gap: 0.5rem; }
     .middle-section__link img {
@@ -99,7 +105,8 @@ img {
   max-width: 400px;
   margin: 3rem auto;
   border-radius: 0.5rem;
-  padding: 1rem; }
+  padding: 1rem;
+  box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.3); }
   .testimonials-quote__para {
     max-width: 75ch;
     line-height: 1.6; }
@@ -134,6 +141,8 @@ img {
     border: none;
     width: 100%;
     font-size: 1.3rem; }
+  .early-access__error {
+    display: block; }
   .early-access__button {
     margin-top: 1rem;
     width: 100%;
@@ -144,6 +153,8 @@ img {
   padding: 4rem 2rem;
   color: white;
   font-size: 1.2rem; }
+  .footer__icon-logo {
+    filter: invert(100%) sepia(0) saturate(100%) hue-rotate(3deg) brightness(10000%) contrast(100%); }
   .footer__contact {
     margin-top: 1rem; }
   .footer__phone::before {
@@ -175,7 +186,7 @@ img {
 
 input, button {
   padding: 0.8rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   outline: none;
   border: 1px inset #070439;
   display: inline-block; }
@@ -188,17 +199,79 @@ input, button {
   color: white;
   text-transform: capitalize; }
 
+.button:hover,
+.button:focus,
+.button:focus-visible {
+  box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0.7; }
+
 input::placeholder {
   color: gray; }
 
+input:focus,
+input:focus-visible {
+  box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.3); }
+
 i.fa {
-  padding: 1rem;
+  padding: 0.7rem;
   border-radius: 99rem;
-  width: calc(3rem + 2px);
-  height: calc(3rem + 2px);
+  width: calc(2.5rem + 2px);
+  height: calc(2.5rem + 2px);
   border: 1px solid white;
   cursor: pointer; }
 
 i.fa:hover {
-  border: 1px solid var(--soft-magenta);
-  color: var(--soft-magenta); }
+  border: 1px solid #585989;
+  color: #585989; }
+
+@media (min-width: 750px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 1rem;
+    text-align: initial; }
+    .hero__content {
+      max-width: 75ch; }
+    .hero__form {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      position: relative; }
+      .hero__form button {
+        margin: 0;
+        width: 30%; }
+      .hero__form input {
+        width: 50%; }
+    .hero__error {
+      position: absolute;
+      top: 3.5rem; }
+  .middle-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 1rem; }
+    .middle-section__content {
+      max-width: 75ch; }
+    .middle-section__title {
+      text-align: initial; }
+    .middle-section__link {
+      justify-content: initial; }
+  .testimonials-quote {
+    margin: 3rem 0; }
+  .early-access {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: initial; }
+    .early-access__content {
+      max-width: 75ch; }
+    .early-access__form .button {
+      width: max-content; }
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: initial;
+    padding: 4rem 0; }
+    .footer__social {
+      margin: 2rem 0; } }

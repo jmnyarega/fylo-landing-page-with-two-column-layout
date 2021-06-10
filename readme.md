@@ -24,7 +24,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ### Links
 
-- Solution URL: [here](https://fylo-landing-page-with-two-column-layout-livid.vercel.app)
+- Deployed here: [here](https://fylo-landing-page-with-two-column-layout-livid.vercel.app)
 
 ## My process
 
@@ -35,6 +35,5 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
 
 ## What I learned

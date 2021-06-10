@@ -21,13 +21,15 @@ html {
 }
 
 body {
-    max-width: 1440px;
-    width: 90%;
-    margin: 3rem auto;
-
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9375rem;
     background-color: #eee;
+    margin-top: 3rem;
+}
+
+.container {
+  max-width: 1440px;
+  width: 95%;
 }
 
 img {
@@ -42,6 +44,7 @@ img {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin: 3rem auto;
 }
 
 .nav {
@@ -75,7 +78,7 @@ img {
 
 .hero {
     text-align: center;
-    margin: 5rem 0;
+    margin: 5rem auto;
     color: $very-dark-blue;
 
     &__title {
@@ -100,6 +103,12 @@ img {
         font-size: 1.3rem;
     }
 
+    &__error {
+      display: block;
+      position: absolute;
+      top: 3.5rem;
+    }
+
     &__button {
         margin-top: 1rem;
         width: 100%;
@@ -108,7 +117,7 @@ img {
 }
 
 .middle-section {
-    margin: 8rem 0;
+    margin: 8rem auto;
 
     &__title {
         margin-top: 1rem;
@@ -127,7 +136,6 @@ img {
         font-size: 1rem;
 
         display: flex;
-        align-items: center;
         justify-content: center;
         column-gap: 0.5rem;
 
@@ -158,7 +166,7 @@ img {
     margin: 3rem auto;
     border-radius: 0.5rem;
     padding: 1rem;
-
+    box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.3);
 
     &__para {
         max-width: 75ch;
@@ -211,6 +219,10 @@ img {
         font-size: 1.3rem;
     }
 
+    &__error {
+      display: block;
+    }
+
     &__button {
         margin-top: 1rem;
         width: 100%;
@@ -219,13 +231,17 @@ img {
 }
 
 .footer {
-    background-color: $very-dark-blue;
-    padding: 4rem 2rem;
-    color: white;
-    font-size: 1.2rem;
+  background-color: $very-dark-blue;
+  padding: 4rem 2rem;
+  color: white;
+  font-size: 1.2rem;
+
+    &__icon-logo {
+      filter: invert(100%) sepia(0) saturate(100%) hue-rotate(3deg) brightness(10000%) contrast(100%)
+    }
 
     &__contact {
-        margin-top: 1rem;
+      margin-top: 1rem;
     }
 
     &__phone::before {
@@ -266,13 +282,12 @@ img {
         justify-content: center;
         gap: 0.5rem;
     }
-
 }
 
 
 input, button {
     padding: 0.8rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     outline: none;
     border: 1px inset $very-dark-blue;
     display: inline-block;
@@ -287,22 +302,120 @@ input, button {
     text-transform: capitalize;
 }
 
+.button:hover,
+.button:focus,
+.button:focus-visible {
+  box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+
 input::placeholder {
     color: gray;
 }
 
+input:focus,
+input:focus-visible {
+  box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
 
 i.fa {
-  padding: 1rem;
+  padding: 0.7rem;
   border-radius: 99rem;
-  width: calc(3rem + 2px);
-  height: calc(3rem + 2px);
-
+  width: calc(2.5rem + 2px);
+  height: calc(2.5rem + 2px);
   border: 1px solid white;
   cursor: pointer;
 }
 
 i.fa:hover {
-  border: 1px solid var(--soft-magenta);
-  color: var(--soft-magenta);
+  border: 1px solid $desaturated-blue;
+  color: $desaturated-blue;
+}
+
+
+@media (min-width: 750px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 1rem;
+
+    text-align: initial;
+
+    &__content {
+      max-width: 75ch;
+    }
+
+    &__form {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      position: relative;
+
+      button {
+        margin: 0;
+        width: 30%;
+      }
+
+      input {
+        width: 50%;
+      }
+    }
+
+    &__error {
+      position: absolute;
+      top: 3.5rem;
+    }
+  }
+
+  .middle-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 1rem;
+
+    &__content {
+      max-width: 75ch;
+    }
+
+    &__title {
+      text-align: initial;
+    }
+
+    &__link {
+      justify-content: initial;
+    }
+  }
+
+.testimonials-quote {
+    margin: 3rem 0;
+  }
+
+  .early-access {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: initial;
+
+    &__content {
+      max-width: 75ch;
+    }
+
+    &__form {
+      .button {
+        width: max-content;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: initial;
+    padding: 4rem 0;
+
+    &__social {
+      margin: 2rem 0;
+    }
+  }
 }
