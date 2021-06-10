@@ -262,12 +262,14 @@ i.fa:hover {
   .early-access {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: initial; }
     .early-access__content {
       max-width: 75ch; }
-    .early-access__form .button {
-      width: max-content; }
+    .early-access__form {
+      width: 35%; }
+      .early-access__form .button {
+        width: max-content; }
   .footer {
     display: flex;
     justify-content: space-around;
